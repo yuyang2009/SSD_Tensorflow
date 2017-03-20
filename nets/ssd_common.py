@@ -52,7 +52,7 @@ def tf_ssd_bboxes_encode_layer(labels,
     vol_anchors = (xmax - xmin) * (ymax - ymin)
 
     # Initialize tensors...
-    # shape = ymin.shepe [img_width, img_height, num_anchors]
+    # shape = ymin.shape [img_width, img_height, num_anchors]
     shape = (yref.shape[0], yref.shape[1], href.size)
     feat_labels = tf.zeros(shape, dtype=tf.int64)
     feat_scores = tf.zeros(shape, dtype=dtype)
