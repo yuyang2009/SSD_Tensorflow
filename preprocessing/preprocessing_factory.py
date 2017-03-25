@@ -25,6 +25,7 @@ import tensorflow as tf
 # from preprocessing import vgg_preprocessing
 
 from preprocessing import ssd_vgg_preprocessing
+from preprocessing import ssd_inception_preprocessing
 
 slim = tf.contrib.slim
 
@@ -47,6 +48,7 @@ def get_preprocessing(name, is_training=False):
     preprocessing_fn_map = {
         'ssd_300_vgg': ssd_vgg_preprocessing,
         'ssd_512_vgg': ssd_vgg_preprocessing,
+        'ssd_inception': ssd_inception_preprocessing,
     }
 
     if name not in preprocessing_fn_map:
